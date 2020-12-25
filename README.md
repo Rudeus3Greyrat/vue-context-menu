@@ -1,6 +1,8 @@
 # add-context-menu
 
-> A simple universal context menu for HTML elements.
+> A simple universal context menu for HTML elements.<br>
+> https://www.npmjs.com/package/add-context-menu <br>
+> https://github.com/Rudeus3Greyrat/vue-context-menu
 
 ## Installation
 
