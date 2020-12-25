@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import Bus from '../EventBus'
+import Bus from '../contextMenu/EventBus'
 export default {
-name: "context-menu-item",
+name: "ContextMenuItem",
   props:{
   select:{
     type: String|Number|Object,

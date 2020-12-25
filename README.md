@@ -1,4 +1,4 @@
-# vue-context-menu
+# add-context-menu
 
 > A simple universal context menu for HTML elements.
 
@@ -6,14 +6,15 @@
 
 ``` bash
 # install with npm
-npm i vue-context-menu
+npm i add-context-menu
 ```
 
 ## Quick Start
 
 ``` bash
-# import vue-context-menu
-import { ContextMenu,ContextMenuItem } from 'vue-context-menu'
+# import add-context-menu
+import ContextMenu from 'add-context-menu'
+import ContextMenuItem from 'add-context-menu'
 Vue.use(ContextMenu)
 Vue.use(ContextMenuItem)
 ```

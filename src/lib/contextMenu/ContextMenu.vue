@@ -7,7 +7,7 @@
 <script>
 import Bus from "./EventBus";
 export default {
-  name: "context-menu",
+  name: "ContextMenu",
   methods:{
     handler(val){
       this.$emit('select',val)

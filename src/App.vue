@@ -9,20 +9,20 @@
       <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-      <context-menu @select="handleSelect">
-        <context-menu-item :select="{key:1,value:'下载'}">下载</context-menu-item>
-        <context-menu-item :select="{key:2,value:'下载2'}">重命名</context-menu-item>
-        <context-menu-item :select="{key:3,value:'下载我'}">厉害的要死</context-menu-item>
-        <context-menu-item :select="{key:4,value:'下载s'}">其实还挺好</context-menu-item>
-        <context-menu-item :select="{key:5,value:'下载dfc'}">查不过</context-menu-item>
-      </context-menu>
+      <ContextMenu @select="handleSelect">
+        <ContextMenuItem :select="{key:1,value:'下载'}">下载</ContextMenuItem>
+        <ContextMenuItem :select="{key:2,value:'下载2'}">重命名</ContextMenuItem>
+        <ContextMenuItem :select="{key:3,value:'下载我'}">厉害的要死</ContextMenuItem>
+        <ContextMenuItem :select="{key:4,value:'下载s'}">其实还挺好</ContextMenuItem>
+        <ContextMenuItem :select="{key:5,value:'下载dfc'}">查不过</ContextMenuItem>
+      </ContextMenu>
     </ul>
   </div>
 </template>
 
 <script>
 import ContextMenu from "./lib/contextMenu/ContextMenu";
-import ContextMenuItem from "./lib/contextMenu/components/ContextMenuItem";
+import ContextMenuItem from "./lib/contextMenuItem/ContextMenuItem";
 export default {
   name: 'app',
   components:{
