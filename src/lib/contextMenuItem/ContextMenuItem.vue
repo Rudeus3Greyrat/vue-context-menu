@@ -1,6 +1,6 @@
 <template>
-  <li @click="handler">
-    <slot :style="{opacity:this.disabled?'0.5':'1'}"></slot>
+  <li @click="handler" :style="{opacity:this.disabled?'0.5':'1'}">
+    <slot></slot>
   </li>
 </template>
 
