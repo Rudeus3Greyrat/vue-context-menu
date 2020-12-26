@@ -31,9 +31,9 @@ Vue.use(ContextMenuItem)
 
 ``` bash
 <div id='example'></div>
-<context-menu @select="handleSelect">
+<context-menu @select="handleSelect" :divided="true">
     <context-menu-item :select="download">Download</context-menu-item>
-    <context-menu-item :select="rename">Rename</context-menu-item>
+    <context-menu-item :select="rename" :disabled="true">Rename</context-menu-item>
     <context-menu-item :select="moreInfo">More Info</context-menu-item>
 </context-menu>
 
@@ -42,7 +42,14 @@ Vue.use(ContextMenuItem)
 # <context-menu-item></context-menu-item> is the item in context menu.
 ```
 
+## context-menu Attributes
+
+| Attribute |                      Description                      |  Type   | Default |
+| :-------: | :---------------------------------------------------: | :-----: | :-----: |
+|  divided  | whether a divider is displayed for whole context menu | Boolean |  false  |
+
 ## context-menu Events
+
 | Event Name |                 Description                  |                    Parameters                    |
 | :--------: | :------------------------------------------: | :----------------------------------------------: |
 |   select   | triggers when a context menu item is clicked | the select dispatched from the context menu item |
@@ -51,7 +58,8 @@ Vue.use(ContextMenuItem)
 
 | Attribute |                         Description                         |         Type         | Default |
 | :-------: | :---------------------------------------------------------: | :------------------: | :-----: |
-|  select   | a select to be dispatched to context-menu's select callback | string/number/object |   ''    |
+|  select   | a select to be dispatched to context-menu's select callback | String/Number/Object |   ''    |
+| disabled  |                whether the item is disabled                 |       Boolean        |  false  |
 
 ## context-menu-item Slot
 

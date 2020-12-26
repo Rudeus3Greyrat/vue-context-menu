@@ -9,12 +9,12 @@
       <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-      <ContextMenu @select="handleSelect">
+      <ContextMenu @select="handleSelect" :divided="false">
         <ContextMenuItem :select="{key:1,value:'下载'}">下载</ContextMenuItem>
         <ContextMenuItem :select="{key:2,value:'下载2'}">重命名</ContextMenuItem>
-        <ContextMenuItem :select="{key:3,value:'下载我'}">厉害的要死</ContextMenuItem>
+        <ContextMenuItem :select="{key:3,value:'下载我'}" :disabled="true">厉害的要死</ContextMenuItem>
         <ContextMenuItem :select="{key:4,value:'下载s'}">其实还挺好</ContextMenuItem>
-        <ContextMenuItem :select="{key:5,value:'下载dfc'}">查不过</ContextMenuItem>
+        <ContextMenuItem :select="{key:5,value:'下载dfc'}" :disabled="true">查不过</ContextMenuItem>
       </ContextMenu>
     </ul>
   </div>
