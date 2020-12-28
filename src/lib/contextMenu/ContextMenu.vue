@@ -24,8 +24,6 @@ export default {
   },
   mounted() {
     let listBox=document.getElementById(this.dynamicId)
-    console.log(listBox)
-    console.log(listBox.previousElementSibling)
     listBox.previousElementSibling.oncontextmenu=function (e){
       let ev=e||event
       ev.preventDefault()
@@ -53,5 +51,6 @@ ul{
   background-color: #fff;
   display: none;
   position: fixed;
+  z-index:999;
 }
 </style>

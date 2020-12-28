@@ -1,7 +1,7 @@
 {
   "name": "add-context-menu",
   "description": "A simple universal context menu for HTML elements.",
-  "version": "1.2.0",
+  "version": "1.4.1",
   "author": "(Greyrat <3041084465@qq.com>)",
   "license": "MIT",
   "private": false,
