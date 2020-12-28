@@ -1,5 +1,5 @@
 <template>
-  <ul id="list">
+  <ul class="list" :id="dynamicId">
     <slot></slot>
   </ul>
 </template>
@@ -8,6 +8,11 @@
 import Bus from "./EventBus";
 export default {
   name: "ContextMenu",
+  data(){
+    return {
+      dynamicId:''
+    }
+  },
   methods:{
     handler(val){
       this.$emit('select',val)
@@ -15,9 +20,12 @@ export default {
   },
   created() {
     Bus.$on('selectEmitted',this.handler)
+    this.dynamicId=String(Math.random())
   },
   mounted() {
-    let listBox=document.getElementById('list')
+    let listBox=document.getElementById(this.dynamicId)
+    console.log(listBox)
+    console.log(listBox.previousElementSibling)
     listBox.previousElementSibling.oncontextmenu=function (e){
       let ev=e||event
       ev.preventDefault()
@@ -40,10 +48,10 @@ ul{
   margin: 0;
   list-style: none;
 }
-#list{
+.list{
   border: 1px solid darkgrey;
   background-color: #fff;
   display: none;
-  position: absolute;
+  position: fixed;
 }
 </style>
