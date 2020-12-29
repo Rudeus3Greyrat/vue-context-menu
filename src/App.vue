@@ -39,7 +39,7 @@ export default {
   },
   methods:{
     handleSelect(val){
-      console.log(val)
+      // console.log(val)
     }
   }
 }

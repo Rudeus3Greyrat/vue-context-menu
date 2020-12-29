@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import Bus from '../contextMenu/EventBus'
 export default {
 name: "ContextMenuItem",
   props:{
@@ -16,7 +15,7 @@ name: "ContextMenuItem",
   },
   methods:{
   handler(){
-    Bus.$emit('selectEmitted',this.select)
+    this.$parent.$emit('select', this.select)
   }
   }
 }
