@@ -1,5 +1,5 @@
 <template>
-  <ul class="list" :id="dynamicId">
+  <ul class="vue-context-menu-list" :id="dynamicId">
     <slot></slot>
   </ul>
 </template>
@@ -27,13 +27,18 @@ export default {
     listBox.previousElementSibling.oncontextmenu=function (e){
       let ev=e||event
       ev.preventDefault()
-      let x=ev.clientX
-      let y=ev.clientY
-      listBox.style.display='block'
-      listBox.style.left=x+'px'
-      listBox.style.top=y+'px'
-      document.onclick=function (){
-        listBox.style.display='none'
+      let itemList=[...document.getElementsByClassName('vue-context-menu-list')]
+      if(itemList.some(el=>el.style.display!=='none')){
+        itemList.forEach(el=>el.style.display='none')
+      }else{
+        let x=ev.clientX
+        let y=ev.clientY
+        listBox.style.display='block'
+        listBox.style.left=x+'px'
+        listBox.style.top=y+'px'
+        document.onclick=function (){
+          listBox.style.display='none'
+        }
       }
     }
   }
@@ -46,7 +51,7 @@ ul{
   margin: 0;
   list-style: none;
 }
-.list{
+.vue-context-menu-list{
   border: 1px solid darkgrey;
   background-color: #fff;
   display: none;
